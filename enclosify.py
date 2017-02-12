@@ -38,7 +38,7 @@ class MainHandler(tornado.web.RequestHandler):
             # web = Loader("./")
             msg = ""
             for letter in phrase:
-                msg += self.output_block(letter)
+                msg += "{} ".format(self.output_block(letter))
             self.write(msg)
             return
 
