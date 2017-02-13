@@ -35,10 +35,12 @@ class MainHandler(tornado.web.RequestHandler):
             return block_letter
 
         def get(self, phrase="enclosify text"):
-            # web = Loader("./")
-            msg = ""
+            web = Loader("./")
+            enclosed_text = ""
             for letter in phrase:
-                msg += "{} ".format(self.output_block(letter))
+                enclosed_text += "{} ".format(self.output_block(letter))
+            msg = web.load("enclosify.html").generate(
+                            enclosed_text=enclosed_text)
             self.write(msg)
             return
 
