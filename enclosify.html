@@ -1,4 +1,3 @@
-{% autoescape None %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +6,12 @@
 <title>Enclosify text</title>
 </head>
 <body>
+<input type="text" name="copy" value="{{ enclosed_text }}" readonly />
+<br>
 <form method="get" action="/">
-        <input type="text" name="copy" value="{{ enclosed_text }}" readonly />
+        <p>Enter text to enclosify below</p>
+        <input type="text" name="enclosify" /><br>
+        <input type="submit" value="Enclosify text"/>
 </form>
 </body>
 </html>

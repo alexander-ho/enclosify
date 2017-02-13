@@ -34,8 +34,11 @@ class MainHandler(tornado.web.RequestHandler):
             block_letter = chr(int(unicode_prefix, 16))
             return block_letter
 
-        def get(self, phrase="enclosify text"):
+        def get(self):
             web = Loader("./")
+            phrase = self.get_argument("enclosify", "")
+            if phrase == "":
+                phrase = "enclosify text"
             enclosed_text = ""
             for letter in phrase:
                 enclosed_text += "{} ".format(self.output_block(letter))
@@ -49,7 +52,6 @@ settings = {}
 
 application = tornado.web.Application([
     (r"/", MainHandler),
-    (r"/([^/]+)", MainHandler),
 ], **settings)
 
 if __name__ == "__main__":
