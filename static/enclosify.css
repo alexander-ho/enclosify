@@ -6,8 +6,16 @@ div.enclosify {
     color: black;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 70%;
 }
 
+@media only screen
+    and (min-width: 1024px)
+    and (min-height: 768px) {
+        div.enclosify {
+            width: 20%;
+        }
+}
 
 input, button.clip-btn {
     width: 100%;
