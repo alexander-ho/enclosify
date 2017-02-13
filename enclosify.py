@@ -37,7 +37,7 @@ class MainHandler(tornado.web.RequestHandler):
 
         def get(self):
             web = Loader("./")
-            phrase = self.get_argument("enclosify", "")
+            phrase = self.get_argument("enclosify", "").lower()
             if phrase == "":
                 phrase = "enclosify text"
             enclosed_text = ""
