@@ -21,6 +21,7 @@ input, button.clip-btn {
 
 input#copy {
     text-align: center;
+    background-color: #cdd2d8;
 }
 
 input[type=submit]:hover, button.clip-btn:hover {
