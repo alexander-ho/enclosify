@@ -1,0 +1,13 @@
+div.enclosify {
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    font-family: "Arial", Arial, sans-serif;
+    color: white;
+    text-shadow:
+    -1px -1px #000000,
+    1px -1px #000000,
+    -1px 1px #000000,
+    1px 1px #000000;
+    transform: translate(-50%, -50%);
+}

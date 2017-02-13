@@ -3,15 +3,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="description" content="E N C L O S I F Y T E X T"/>
+<link rel="stylesheet" type="text/css" href="static/enclosify.css"/>
 <title>Enclosify text</title>
 </head>
 <body>
-<input type="text" name="copy" value="{{ enclosed_text }}" readonly />
+<div class="enclosify">
+<input type="text" id="copy" value="{{ enclosed_text }}" readonly />
 <br>
 <form method="get" action="/">
         <p>Enter text to enclosify below</p>
         <input type="text" name="enclosify" /><br>
         <input type="submit" value="Enclosify text"/>
 </form>
+</div>
 </body>
 </html>

@@ -4,6 +4,7 @@ import tornado.ioloop
 import tornado.web
 from tornado.template import Loader
 import logging
+import os
 
 
 try:
@@ -48,7 +49,9 @@ class MainHandler(tornado.web.RequestHandler):
             return
 
 
-settings = {}
+settings = {
+    "static_path": os.path.join(os.path.dirname(__file__), "static"),
+}
 
 application = tornado.web.Application([
     (r"/", MainHandler),
