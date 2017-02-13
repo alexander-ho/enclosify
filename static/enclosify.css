@@ -8,6 +8,21 @@ div.enclosify {
     text-align: center;
 }
 
+
+input, button.clip-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;    
+}
+
 input#copy {
     text-align: center;
+}
+
+input[type=submit]:hover, button.clip-btn:hover {
+    background-color: #696e70;
 }

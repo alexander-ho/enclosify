@@ -8,7 +8,15 @@
 </head>
 <body>
 <div class="enclosify">
-<input type="text" id="copy" value="{{ enclosed_text }}" readonly />
+<script src="static/clipboard.min.js" /></script>
+<script>
+    var clipboard = new Clipboard('.clip-btn');
+</script>
+<input type="text" id="copy" value="{{ enclosed_text }}" readonly>
+<button class='clip-btn' data-clipboard-target="#copy">
+    Copy
+</button>
+</input>
 <br>
 <form method="get" action="/">
         <p>Enter text to enclosify below</p>
